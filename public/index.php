@@ -16,5 +16,7 @@ $router->map('GET', '/', function() {
     require VIEW_PATH . '/home/index.php';
 });
 
-$match = $router->match();
-$match['target']();
+$match = $router->match(); 
+if ($match){
+    $match['target']();
+}
